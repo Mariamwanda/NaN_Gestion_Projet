@@ -1,4 +1,117 @@
-p{
-    font-size: 60px;
-    color: aqua;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
+
+header{
+    background-color: rgba(140, 172, 186, 1);
+    height: 980px;
+}
+
+header .nav-logo{
+    float: right;
+    margin-left: 10%;
+    margin-top: 30px;
+
+}
+
+header .nav-logo h4{
+   margin-left: 30px;
+   font-family: arial;
+   color: white;
+}
+
+header .nav-logo img{
+    width: 65%;
+    height: 160px;
+    border-radius: 500px;
+}
+
+header .nav-bar{
+   display: flex;
+}
+
+.nav-lien {
+    float: right;
+    margin-left: 50%;
+    margin-top: 20px;
+ }
+
+ .nav-lien a{
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+ }
+ 
+ .nav-lien i{
+    margin: 10px;
+ }
+ 
+
+.partieSection{
+    display: flex;
+    width: 100%;
+}
+
+.partieSection .card-left{
+  width: 40%;
+  height: 450px;
+  float: right;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+
+.partieSection .card-left #unique{
+    margin: 20px;
+    font-family: arial;
+    color: white;
+}
+
+.partieSection .card-left p{
+    font-size: 25px;
+    font-family: arial;
+}
+
+.partieSection .card-left span{
+    color: rgba(201, 56, 58, 1);
+    margin-top: 5px;
+}
+
+.partieSection .card-left button{
+    width: 25%;
+    height: 50px;
+    margin: 30px;
+    position: relative;
+    left: 25%;
+    background-color: rgba(5, 74, 104, 0.6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.partieSection .card-left   a:hover button {
+    background-color: white;
+    color: rgba(5, 74, 104, 0.6);
+}
+
+.partieSection .card-right{
+    width: 60%;
+    height: 695px;
+}
+
+.partieSection .card-right img{
+    width: 70%;
+    height: 1075px;
+    float: right;
+    margin-right: 10%;
+    margin-top: -28%;
+}
+
+#produits{
+    background-color: aqua;
+    width: 100%;
+    height: 200px;
+}
+
+ 
