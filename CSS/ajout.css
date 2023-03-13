@@ -4,7 +4,7 @@ p{
 }
 
 form {
-    background-color: #252525;
+    background-color: #f9c8c8;
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -14,7 +14,7 @@ form {
   form button {
     padding: 10px;
     font-size: 20px;
-    background-color: #050138;
+    background-color: #8880f4;
     color: white;
     cursor: pointer;
     outline: none;
@@ -35,7 +35,7 @@ form {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    background-color: #252525;
+    background-color: #b9c059;
   }
   #allUsers h3 {
     color: white;

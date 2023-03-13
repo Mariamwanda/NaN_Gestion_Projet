@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(221, 195, 245);
+}
+
+section{
+    border: 2px solid black;
+    width: 65%;
+    height: 610px;
+    float: left;
+    margin-left: 10%;
+    margin-top: 100px;
+    display: flex;
+}
+
+section .partieGauche{
+    width: 25%;
+    height: 600px;
+    border-radius: 15px;
+    background-color: rgba(140, 172, 186, 1);
+}
+
+.partieGauche .Entete{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(5, 74, 104, 1);
+    border-radius: 15px;
+}
+
+section .partieDroite{
+    width: 75%;
+    height: 600px;
+    
+}
+
+.partieDroite .haut{
+    width: 100%;
+    height: 50px;
+    background-color: aqua;
+}
+
+.partieDroite .MesDiv{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.MesDiv{
+    display: flex;
+}
+
+.MesDiv .rond{
+    width: 23%;
+    height: 100px;
+    background-color: rgba(5, 74, 104, 1);
+    margin-left: 12px;
+    border-radius: 15px;
+}
+
+.MesLiens{
+    margin-top: 25px;
+    
+}
+
+.MesLiens a{
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    font-family: sans-serif;
+   
+}
+
+.MesLiens i{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.rond{
+    display: flex;
+}
+
+.rond i{
+    font-size: 20px;
+    float: left;
+    margin-left: 45%;
+    background-color: antiquewhite;
+    border-radius: 100%;
+    width: 20%;
+    height: 33px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.rond h5{
+    font-size: 15px;
+    color: #ffffff;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+
+.partieDroite .Liens{
+    display: flex;
+   justify-content: space-around;
+}
+
+table{
+    border-collapse: collapse;
+    width: 80%;
+    font-family: sans-serif;
+    margin-top: 10px;
+    
+  }
+  th, td{
+    border: none;
+    padding: 10px;
+    vertical-align: top;
+}
+
+.btn{
+    height: 40px;
+    width: 25%;
+  
+    padding: 10px;
+    float: left;
+    margin-left: 75%;
+    margin-top: -45px;
+    display: flex;
+}
+
+.btn button{
+    width: 100%;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    background-color:rgba(5, 74, 104, 1) ;
+}
+
+.btn i{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+  
