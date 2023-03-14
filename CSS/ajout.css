@@ -11,7 +11,7 @@ form {
     flex-direction: column;
     flex-wrap: wrap;
   }
-  form button {
+form button {
     padding: 10px;
     font-size: 20px;
     background-color: #8880f4;

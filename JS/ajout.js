@@ -1,10 +1,8 @@
-// /Ici dire que pour le moment on fait du JavaScript simple côté client donc on n'utilise pas de données issues d'une bases de données comme des données issues d'un fichier JSON par exemple. Mais ils peuvent très bien récupérer les données d'une base de données avec l'API fetch en JavaScript.
 const users = [{ id: 1, nom: "Jean", prenom: "Pierre", age: 25}];
 const validateButton = document.getElementById("valider");
 
 validateButton.addEventListener("click", addUser);
 showAllUsers();
-//Fonction à écrire et variables à créer après avoir créé la fonction showAllUsers()
 updateOrDeleteUser();
 function updateOrDeleteUser() {
   const deleteButtons = document.querySelectorAll(".Supprimer");
@@ -18,7 +16,7 @@ function updateOrDeleteUser() {
   );
 }
 
-//Fonctionnalités
+
 function addUser(e) {
   e.preventDefault();
   const enteredUsersData = {
@@ -40,7 +38,7 @@ function addUser(e) {
 }
 
 function showAllUsers() {
-  document.getElementById("allUsers").innerHTML = ""; // Pour rénitialiser le contenu de la div afin de lui attribuer de nouvelles valeurs
+  document.getElementById("allUsers").innerHTML = ""; 
   users.forEach((user) => {
     const newInputs = {
       nom: document.createElement("input"),
@@ -55,7 +53,6 @@ function showAllUsers() {
 
     for (const [key, value] of Object.entries(newInputs)) {
       value.setAttribute("type", "text",);
-      //Utile pour identifier l'input afin de pouvoir modifier son contenu par la suite
       value.setAttribute("id", `${key}OfUser${user.id}`);
 
       key === "Nom" && value.setAttribute("value", `${user.nom}`);
