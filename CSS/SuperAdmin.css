@@ -9,10 +9,10 @@ body{
 }
 
 section{
-    width: 75%;
-    height: 700px;
+    width: 90%;
+    height: 880px;
     float: left;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 100px;
     display: flex;
     background-color: rgba(217, 217, 217, 1);
@@ -20,7 +20,7 @@ section{
 
 section .partieGauche{
     width: 25%;
-    height: 660px;
+    height: 850px;
     border-radius: 15px;
     background-color: rgba(140, 172, 186, 1);
 }
@@ -58,7 +58,7 @@ section .partieDroite{
     width: 23%;
     height: 200px;
     background-color: rgba(5, 74, 104, 1);
-    margin-left: 12px;
+    margin-left: 20px;
     border-radius: 15px;
 }
 
@@ -104,19 +104,6 @@ section .partieDroite{
 .partieDroite .Liens{
     display: flex;
    justify-content: space-around;
-}
-
-table{
-    border-collapse: collapse;
-    width: 80%;
-    font-family: sans-serif;
-    margin-top: 100px;
-    
-  }
-  th, td{
-    border: none;
-    padding: 10px;
-    vertical-align: top;
 }
 
 .btn{
@@ -195,6 +182,92 @@ table{
   .MesLiens .backgnd{
     width: 100%;
     background: linear-gradient(rgba(5, 74, 104, 1),rgba(140, 172, 186, 1));
-    height: 50px;
+    height: 60px;
     border: 2px solid beige;
+  }
+
+  .tableau{
+    width: 100%;
+    height: 400px;
+    margin-top: 150px;
+  }
+
+  .tableau .ligne1{
+    width: 100%;
+    height: 190px;
+    display: flex;
+  }
+
+  .ligne1 .tab{
+    width: 45%;
+    height: 315px;
+    margin-left: 40px;
+    background-color: #ffffff;
+  }
+
+  .tableau .ligne2{
+    width: 100%;
+    height: 190px;
+    display: flex;
+  }
+
+  .ligne2 .tab{
+    width: 45%;
+    height: 180px;
+    margin-left: 40px;
+    margin-top:170px;
+    background-color: #ffffff;
+  }
+
+  .tab .input{
+    width: 90%;
+    border: 1px solid black;
+    height: 55px;
+    margin: 30px;
+    border-radius: 50px;
+  }
+
+  
+
+  .inputInter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .inputInter p{
+    font-size: 25px;
+    font-family: helvetica;
+    color:rgba(5, 74, 104, 1) ;
+  }
+
+  .inputInter .iconBox{
+    font-size: 20px;
+    color: rgba(177, 136, 30, 0.69);
+  }
+
+  .inputInter b{
+    font-size: 20px;
+    font-family: helvetica;
+  }
+
+  .tab h5{
+    font-size: 20px;
+    font-family: helvetica;
+    margin-left: 20px;
+    color:rgba(5, 74, 104, 1) ;
+  }
+
+  .tab h4{
+    padding: 10px;
+    font-family: helvetica;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .Cours div{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
   }

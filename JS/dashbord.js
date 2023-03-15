@@ -28,6 +28,16 @@ function ajoutTD(){
 }
 ajoutTD();
 
+for(let keys in users){
+if(keys == "nom"){
+
+}
+  let ligne = document.createElement('th');
+  let nom = document.createElement('td');
+//   nom.textContent = users[];
+
+}
+
 // console.log(tbody);
 // console.log(users)
 // console.log(Object.values(users[0]))

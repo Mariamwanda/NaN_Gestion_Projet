@@ -5,7 +5,6 @@
     let genre = document.querySelector('#genre');
     let date = document.querySelector('#date');
     let heure = document.querySelector('#time');
-    console.log(nom);
 
     function recuper(){
         recu = localStorage.getItem('users')
@@ -15,10 +14,10 @@
             return JSON.parse(recu)
         }
     }
-    
 
     function ajout(conatct){
-            let recupere = recuper();
+            // let recupere = recuper();
+            let recupere =  [];
             recupere.push(conatct)
             localStorage.setItem('users',JSON.stringify(recupere))
     }
@@ -30,8 +29,8 @@
             email:email.value,
             genre:genre.value,
             date:date.value,
-            heure:heure.value }
-            // console.log(infos);
+            heure:heure.value 
+        }
           
         
           ajout(infos)
