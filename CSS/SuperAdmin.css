@@ -82,21 +82,20 @@ section .partieDroite{
 }
 
 .rond i{
-    font-size: 20px;
-    float: left;
-    margin-left: 53%;
-    background-color: antiquewhite;
-    border-radius: 100%;
-    width: 15%;
-    height: 30px;
-    text-align: center;
-    margin-top: 10px;
+  font-size: 20px;
+  float: left; margin-left: 65%;
+  background-color: antiquewhite;
+  border-radius: 100%;
+  width: 15%;
+  height: 35px;
+  text-align: center;
+  margin-top: 10px;;
 }
 
 .rond h5{
     font-size: 15px;
     color: #ffffff;
-    margin-left: 20px;
+    margin-left: 10px;
     font-family: sans-serif;
     margin-top: 10px;
 }
@@ -264,10 +263,26 @@ section .partieDroite{
     font-family: helvetica;
     font-size: 20px;
     margin-left: 10px;
+    color:rgba(5, 74, 104, 1) ;
   }
 
-  .Cours div{
+  .Cours .A{
     display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
+    margin-left: 30px;
+    font-size: 25px;
+    font-family: helvetica;
+    color:rgba(5, 74, 104, 1) ;
+  }
+
+  .tab input{
+    width: 50%;
+    height: 50px;
+    margin-left: 30px;
+  }
+
+  .rond p{
+    margin-top: 110px;
+    margin-left: -45px;
+    font-size: 25px;
+    color: #ffffff;
   }
