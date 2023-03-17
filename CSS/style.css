@@ -6,11 +6,112 @@
 }
 
 
-@media (min-width: 600px) {
+body{
+    background-color: rgb(240, 234, 246);
+}
+ 
 
-body {width:100%; }
-
+section{
+    width: 100%;
+    background-color: rgba(140, 172, 186, 1);
+    display: flex;
+    height: 1040px;
 }
 
+section .partieGauche{
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+   
+}
+
+section .partieDroite{
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.partieDroite{
+    background: url(../images/femme.png);
+}
+
+.partieDroite a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.partieDroite .Connecter{
+    width: 22%;
+    height: 45px;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: rgba(5, 74, 104, 1);
+    float: left;
+    margin-left: 55%;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.Connecter i{
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.partieGauche {
+    float: left;
+    margin-left: 250px;
+}
+
+.partieGauche img{
+    width: 20%;
+    margin: 20px;
+    height: 170px;
+    border-radius: 100%;
+}
+
+.partieGauche h4{
+    margin: 25px;
+    font-size: 25px;
+    color: #ffffff;
+    font-family: arial;
+}
+
+.partieGauche p{
+    font-size: 28px;
+    margin: 20px;
+    font-family: arial;
+    color: #ffffff;
+}
+
+span{
+    color: rgba(201, 56, 58, 1);
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.partieGauche button{
+    width: 22%;
+    height: 45px;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    background-color: rgba(5, 74, 104, 1);
+    float: left;
+    margin-left: 25%;
+    margin-top: 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    border: none;
+}
+
+.partieGauche  :hover button{
+    background-color: #ffffff;
+    border: 1px solid black;
+    color: rgba(5, 74, 104, 1);
+}
 
 
