@@ -1,4 +1,3 @@
-
 *{
     padding: 0;
     margin: 0;
@@ -114,4 +113,236 @@ span{
     color: rgba(5, 74, 104, 1);
 }
 
+#MaPage{
+    background-color: rgba(217, 217, 217, 1);
+    width: 100%;
+    height: 590px;
+    display: flex;
+   
+}
+#MaPage .img-grid{
+    width: 450px;
+    height: 450px;
+    margin-top: 60px;
+    margin-left: 175px;
+}
 
+.img-grid img{
+    width: 100%;
+    height: 446px;
+    border-radius: 60px;
+}
+h1{
+   background-color:rgba(217, 217, 217, 1);
+   text-align: center;
+   padding-top: 25px;
+   font-family: sans-serif;
+   color: rgba(5, 74, 104, 1);
+}
+
+.img-grid h2{
+    text-align: center;
+    padding-top: 10px;
+    font-family: sans-serif;
+    color: rgba(5, 74, 104, 1);
+}
+
+#Programme{
+    width: 100%;
+    height: 125vh;
+}
+.rait1{
+    width: 100px;
+    border: 1px solid rgba(5, 74, 104, 1);
+    height: 2px;
+    margin: 25px;
+    margin-left: 970px;
+    
+}
+
+#Programme h3{
+    text-align: center;
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: rgba(5, 74, 104, 1);
+}
+
+#Programme .MesDivA{
+    width: 70%;
+    height: 305px;
+    display: flex;
+    float: left;
+    margin-left: 300px;
+    margin-top: 40px;
+}
+
+.MesDivA .sousdivA{
+    width: 40%;
+    border: 2px solid rgb(49, 49, 49);
+    height: 305px;
+    box-shadow: 1px 1px 1px rgb(98, 97, 97);
+}
+
+.MesDivA .sousdivB{
+    width: 60%;
+    height: 305px;
+}
+
+.sousdivA img{
+    width: 100%;
+    height: 305px;
+}
+
+.sousdivB #inspect{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+
+#inspect h5{
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+.rait{
+    width: 65%;
+    border: 1px solid rgba(5, 74, 104, 1);
+    height: 2px;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+.sousdivB p{
+    margin: 30px;
+    font-size: 25px;
+    font-family: sans-serif;
+    
+}
+
+#Programme .MesDivB{
+    width: 70%;
+    height: 305px;
+    display: flex;
+    float: left;
+    margin-left: 300px;
+    margin-top: 70px;
+}
+
+.MesDivB img{
+    width: 100%;
+    height: 305px;
+}
+
+.MesDivB .sousdivA{
+    width: 40%;
+    border: 2px solid rgb(49, 49, 49);
+    height: 305px;
+    box-shadow: 1px 1px 1px rgb(98, 97, 97);
+}
+
+.MesDivB .sousdivB{
+    width: 60%;
+    height: 305px;
+}
+
+#Programme .MesDivC{
+    width: 70%;
+    height: 305px;
+    display: flex;
+    float: left;
+    margin-left: 300px;
+    margin-top: 70px;
+}
+
+.MesDivC img{
+    width: 100%;
+    height: 305px;
+}
+
+.MesDivC .sousdivA{
+    width: 40%;
+    border: 2px solid rgb(49, 49, 49);
+    height: 305px;
+    box-shadow: 1px 1px 1px rgb(98, 97, 97);
+}
+
+.MesDivC .sousdivB{
+    width: 60%;
+    height: 305px;
+}
+
+#Structure{
+    background-color: rgba(140, 172, 186, 1);
+    width: 100%;
+    height: 390px;
+   
+}
+
+#Structure h2{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-top: 15px;
+    color: rgba(5, 74, 104, 1);
+}
+
+
+#Structure .struct{
+    width: 25%;
+    height: 250px;
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
+    background-color: rgb(28, 86, 111);
+   
+}
+
+#Structure .structDiv{
+    display: flex;
+    margin-left: 280px;
+}
+
+.struct img{
+    width: 15%;
+    height: 90px;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.struct .Admin{
+    display: flex;
+}
+
+.Admin .super{
+    margin-top: 65px;
+    font-family: sans-serif;
+    color: #ffffff;
+    
+}
+
+.struct p{
+    font-size: 15px;
+    color: #ffffff;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+.struct .Icons{
+    float: left;
+    margin-left: 70%;
+    margin-top: 30px;
+    color: rgb(236, 213, 95);
+}
+
+#footer{
+    background-color: rgba(83, 83, 83, 0.33);
+    width: 100%;
+    height: 250px;
+}
+
+#footer img{
+    width: 8%;
+    height: 120px;
+    border-radius: 100%;
+}

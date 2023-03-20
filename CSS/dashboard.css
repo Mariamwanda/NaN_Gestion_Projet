@@ -102,15 +102,16 @@ section .partieDroite{
 
 table{
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
     font-family: sans-serif;
     margin-top: 100px;
     
   }
   th, td{
-    border: none;
+    border: 1px solid black;
     padding: 10px;
     vertical-align: top;
+    margin-left: 150px;
 }
 
 .btn{
@@ -198,4 +199,7 @@ table{
     margin-left: -45px;
     font-size: 25px;
     color: #ffffff;
+  }
+  .dashbord,td{
+    
   }
