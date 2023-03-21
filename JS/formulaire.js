@@ -1,11 +1,12 @@
 
-    let nom = document.querySelector('#nom')
-    let prenom = document.querySelector('#prenom')
+    let nom = document.querySelector('#nom');
+    let prenom = document.querySelector('#prenom');
     let email = document.querySelector('#email')
     let genre = document.querySelector('#genre');
     let date = document.querySelector('#date');
     let heure = document.querySelector('#time');
     let tache = document.querySelector('#tache');
+    let description = document.querySelector('#description');
 
     function recuper(){
         recu = localStorage.getItem('users')
@@ -34,18 +35,11 @@
                 date:date.value,
                 heure:heure.value,
                 tache:tache.value,
+                description:description.value,
             }
-
-
             ajout(infos)
         }
-          
-        
-         
-
             document.location.reload()
-    
-
     });
 
     console.log(btn);

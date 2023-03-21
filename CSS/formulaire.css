@@ -10,7 +10,7 @@ body{
 
 #formulaire{
     width: 50%;
-    height: 500px;
+    height: 550px;
     border: 1px solid black;
     margin: 150px;
     margin-left: 25%;
@@ -19,7 +19,7 @@ body{
 
 #formulaire .premier{
     width: 50%;
-    height: 500px;
+    height: 550px;
     background: url(../images/fleur.jpeg);
     background-size: cover;
     /* opacity: 0.7; */
@@ -56,7 +56,7 @@ body{
 
 #formulaire .second{
     width: 50%;
-    height: 500px;
+    height: 550px;
     background-color: rgba(140, 172, 186, 1);
     
 }
@@ -79,7 +79,6 @@ body{
 
 .second input{
     width: 75%;
-    height: 35px;
 }
 
 #formulaire .second input[type="email"],input[type="text"],input[type="time"],input[type="date"]{

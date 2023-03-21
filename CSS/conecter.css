@@ -65,7 +65,7 @@ form .inputs input[type="email"],input[type="password"]{
     color: rgba(5, 74, 104, 1);
 }
 
-form button{
+form a button{
     margin-top: 30px;
     width: 90%;
     padding: 15px 25px;

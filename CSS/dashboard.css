@@ -102,45 +102,31 @@ section .partieDroite{
 
 table{
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
     font-family: sans-serif;
     margin-top: 100px;
     
   }
-  th, td{
+
+  table button{
+    width: 50px;
+    height: 40px;
+    border: 2px solid red;
+  }
+
+
+  th,td{
     border: 1px solid black;
     padding: 10px;
     vertical-align: top;
     margin-left: 150px;
+    text-align: center;
+    outline: none;
 }
 
-.btn{
-    height: 40px;
-    width: 25%;
-  
-    padding: 10px;
-    float: left;
-    margin-left: 75%;
-    margin-top: -45px;
-    display: flex;
+table tr:hover td{
+    background-color: rgba(140, 172, 186, 1);
 }
-
-.btn button{
-    width: 100%;
-    height: 30px;
-    margin-left: 10px;
-    border-radius: 20px;
-    border: none;
-    color: #ffffff;
-    background-color:rgba(5, 74, 104, 1) ;
-}
-
-.btn i{
-    font-size: 15px;
-    margin-left: 10px;
-    margin-bottom: 5px;
-}
-
 
   .haut img{
     width: 5%;
@@ -187,6 +173,10 @@ table{
     font-family: sans-serif;
   }
 
+  .MesLiens a{
+    text-decoration: no;
+  }
+
   .MesLiens .backgnd{
     width: 100%;
     background: linear-gradient(rgba(5, 74, 104, 1),rgba(140, 172, 186, 1));
@@ -200,6 +190,6 @@ table{
     font-size: 25px;
     color: #ffffff;
   }
-  .dashbord,td{
-    
+  .buttonText{
+    background-color: aqua;
   }

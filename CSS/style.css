@@ -317,13 +317,13 @@ h1{
 .Admin .super{
     margin-top: 65px;
     font-family: sans-serif;
-    color: #ffffff;
+    color: #cac7c7;
     
 }
 
 .struct p{
     font-size: 15px;
-    color: #ffffff;
+    color: #cac7c7;
     font-family: sans-serif;
     margin-left: 20px;
 }
@@ -338,11 +338,74 @@ h1{
 #footer{
     background-color: rgba(83, 83, 83, 0.33);
     width: 100%;
-    height: 250px;
+    height: 190px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
 }
 
 #footer img{
-    width: 8%;
+    width: 100%;
     height: 120px;
     border-radius: 100%;
+}
+
+
+#footer .recherche{
+    width: 40%;
+    height: 90px;
+    background-color: rgba(5, 74, 104, 1);
+    border-radius: 10px;
+}
+
+#footer .langue{
+    border: 1px solid black;
+    height: 50px;
+    width: 130px;
+}
+
+.recherche{
+    padding-top: 20px;
+    display: flex;
+    padding-left: 100px;
+}
+
+.recherche input{
+    width: 200px;
+    height: 40px;
+    border: 1.2px solid #ffffff;
+    outline: none;
+    margin-left: 85px;
+    border-radius: 5px;
+    background-color: rgba(5, 74, 104, 1);
+    color: #ffffff;
+}
+
+.recherche button{
+    width: 100px;
+    height: 40px;
+    margin-left: 5px;
+    border: 1.2px solid black;
+    border-radius: 5px;
+}
+
+.recherche h6{
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: sans-serif;
+    margin-left: -50px;
+    color: #cac7c7;
+}
+
+#footer p{
+    font-family: sans-serif;
+    font-size: 20px;
+}
+select{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(28, 86, 111);
+    border: 2px solid #cac7c7;
+    border: none;
+    color: #cac7c7;
 }

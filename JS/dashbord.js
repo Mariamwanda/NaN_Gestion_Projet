@@ -9,61 +9,26 @@
 const dashbord = document.querySelector('.dashbord')
 users = JSON.parse(localStorage.getItem('users'));
 console.log(dashbord);
+console.log(users);
 let tbody = document.createElement('tbody');
 
-// function ajoutTD(){
-//     for(let i = 0 ; i< users.length ; i++){
-//         console.log(users[i])
-//         for(let j = 0 ; j < Object.keys(users[i]).length;j++){
-//             console.log(Object.values(users[i])[0]);
-
-
-//             let TD = document.createElement('TD'); 
-//             let context = document.createTextNode(Object.values(users[i])[j]);
-//             console.log(context);
-//         }
-//     }
-   
-// }
-// ajoutTD();
-
-// console.log(users);
-// users.forEach(element => {
-//     console.log(element.nom);
-//     console.log(element.prenom);
-//     console.log(element.email);
-//     console.log(element.genre);
-//     console.log(element.date);
-//     console.log(element.heure);
-//     row = `<tr>
-//     <td>${element.nom}</td>
-//     <td>${element.prenom}</td>
-//     <td>${element.email}</td>
-//     <td>${element.genre}</td>
-//     <td>${element.date}</td>
-//     <td>${element.heure}</td>
-//      </tr>`
-
-           
-// });
-
-// table.appendChild(tbody)
-
-// let contacts = getContacts();
 
 function createTable() {
   for (let index = 0; index < users.length; index++) {
     let row = document.createElement("tr");
     // creer le button de supression
     let buttonCell = document.createElement("td");
+    let buttonCel = document.createElement("td");
     let deleteButton = document.createElement("button");
     let buttonText = document.createTextNode("terminer");
-    // deleteButton.setAttribute("class", "delete-btn");
+    let buttonMotif = document.createTextNode("Modifier");
+    deleteButton.setAttribute("class", "delete-btn");
     deleteButton.appendChild(buttonText);
+    deleteButton.appendChild(buttonMotif);
 
-    for (
+    for ( 
       let element = 0;
-      element < Object.keys(users[0]).length;
+      element < Object.keys(users[index]).length;
       element++
     ) {
         
@@ -93,3 +58,4 @@ function createTable() {
 }
 
 createTable();
+
