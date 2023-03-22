@@ -20,11 +20,9 @@ function createTable() {
     let buttonCell = document.createElement("td");
     let buttonCel = document.createElement("td");
     let deleteButton = document.createElement("button");
-    let buttonText = document.createTextNode("terminer");
-    let buttonMotif = document.createTextNode("Modifier");
+    let buttonText = document.createTextNode("Supprimer");
     deleteButton.setAttribute("class", "delete-btn");
     deleteButton.appendChild(buttonText);
-    deleteButton.appendChild(buttonMotif);
 
     for ( 
       let element = 0;
@@ -58,4 +56,7 @@ function createTable() {
 }
 
 createTable();
+
+
+
 
