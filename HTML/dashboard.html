@@ -11,47 +11,116 @@
 </head>
 <body>
    <section>
-        <div class="partieGauche">
-            <div class="Entete">
-             <a href="../HTML/formulaire.html"><img src="../images/icon.png" alt=""></a>
-                <p>Super Admin</p>
-            </div>
-            <div class="MesLiens">
-                <div ><i class="fa-solid fa-table"></i>Tableau de Bord</div><br>
-                <div ><i class="fa-solid fa-user-tie"></i>Personnalisation</div><br>
-                <div class="backgnd"> <i class="fa-solid fa-check-double"></i>Taches</div><br>
-                <div> <i class="fa-solid fa-gear"></i>Parametre</div><br>
-                <div> <i class="fa-sharp fa-solid fa-signal"></i>Status</div>
-            </div>
-        </div>
-        <div class="partieDroite">
-            <div class="haut">
-                <a href="../HTML/travailleurs.html">Nombres Travailleurs</a>
-               <div class="Nom">MARIAM</div>
-                <img src="../images/icon.png" alt="">
-            </div>
-            <div class="MesDiv">
-                <div class="rond">
-                    <h5>Travailleurs</h5>
-                    <p style="margin-left: -80px;"> 125</p>
-                    <i class="fa-solid fa-user-group" style=" margin-left: 50%;"></i>
+     
+            <div class="container">
+                <div class="navigation .active">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                   <img src="../images/icon.png" alt="">
+                                </span>
+                                <span class="title">Mariam Wandaogo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fa-solid fa-house"></i>
+                                </span>
+                                <span class="title">Tableau Bord</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fa-solid fa-users"></i>
+                                </span>
+                                <span class="title">Personnalisation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fa-solid fa-check-double"></i>
+                                </span>
+                                <span class="title">Taches</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../HTML/parametre.html">
+                                <span class="icon">
+                                    <i class="fa-solid fa-gear"></i>
+                                </span>
+                                <span class="title">Parametres</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon">
+                                    <i class="fa-sharp fa-solid fa-signal"></i>
+                                </span>
+                                <span class="title">Status</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="rond" style="background-color: rgba(140, 172, 186, 1);">
-                    <h5>Admin</h5>
-                    <p>3</p>
-                    <i class="fa-solid fa-handshake-angle" ></i>
-                </div>
-                <div class="rond">
-                    <h5>Postes</h5>
-                    <p>55</p>
-                    <i class="fa-brands fa-accusoft"></i>
-                </div>
-                <div class="rond" style="background-color: rgba(140, 172, 186, 1);">
-                    <h5>Places</h5>
-                    <p>155</p>
-                    <i class="fa-solid fa-handshake-angle" ></i>
-                </div>
-            </div>
+                <div class="main">
+                    <div class="topbar">
+                        <div class="toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div class="search">
+                            <label>
+                                <input type="text" placeholder="search here">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </label>
+                        </div>
+                        <div class="user">
+                            <img src="../images/icon.png" alt="">
+                        </div>
+                    </div>
+                    <div class="cardBox">
+                        <div class="card">
+                            <div>
+                               
+                                <div class="cardName">Travailleurs</div>
+                                <div class="numbers">125</div>
+                            </div>
+                            <div class="iconBox">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <div class="cardName">Admin</div>
+                                <div class="numbers">3</div>
+                               
+                            </div>
+                            <div class="iconBox">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                
+                                <div class="cardName">Postes</div>
+                                <div class="numbers">55</div>
+                            </div>
+                            <div class="iconBox">
+                                <i class="fa-regular fa-comment"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <div class="numbers">145</div>
+                                <div class="cardName">Revenus</div>
+                            </div>
+                            <div class="iconBox">
+                                <i class="fa-solid fa-money-bill"></i>
+                            </div>
+                        </div>
+                    </div>
             
             <table class="dashbord">
                 <thead>

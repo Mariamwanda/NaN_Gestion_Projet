@@ -1,0 +1,153 @@
+let list = document.querySelectorAll(".navigation li");
+
+function activeLink(){
+    list.forEach(item =>{
+        item.classList.remove("hovered");
+    });
+    this.classList.add("hovered");
+}
+
+
+list.forEach(item => item.addEventListener("mouseover",activeLink));
+
+let toggle = document.querySelector(".toggle");
+let navigation = document.querySelector(".navigation");
+let main = document.querySelector(".main");
+
+toggle.onclick = function(){
+    navigation.classList.toggle("active");
+    main.classList.toggle("active");
+}
+
+
+const users = [{ id: 1, nom: "Jean", prenom: "Pierre", age: 25}];
+const validateButton = document.getElementById("valider");
+
+validateButton.addEventListener("click", addUser);
+showAllUsers();
+updateOrDeleteUser();
+function updateOrDeleteUser() {
+  const deleteButtons = document.querySelectorAll(".Supprimer");
+  const editButtons = document.querySelectorAll(".Modifier");
+
+  deleteButtons.forEach((button) =>
+    button.addEventListener("click", () => deleteUser(button.id))
+  );
+  editButtons.forEach((button) =>
+    button.addEventListener("click", () => editUser(button.id))
+  );
+}
+
+function addUser(e) {
+  e.preventDefault();
+  const enteredUsersData = {
+    id: users.length !== 0 ? users[users.length - 1].id + 1 : 1,
+    nom: document.getElementById("nom").value,
+    prenom: document.getElementById("prenom").value,
+    age: document.getElementById("age").value,
+  };
+//   if (
+//     enteredUsersData.nom !== "" &&
+//     enteredUsersData.prenom !== "" &&
+//     enteredUsersData.age !== ""    
+   
+    
+//   ) {
+//     users.push(enteredUsersData);
+    //showAllUsers();
+//     //document.getElementById("allUsers").append()
+//     document.getElementById("allUsers").innerHTML = ""
+//     users.forEach((user)=> {
+//         nom=document.createElement("input")
+//         prenom=document.createElement("input")
+//         age=document.createElement("input")
+//         newDiv = document.createElement("div")
+//         newDiv.append(nom)
+//         newDiv.append(prenom)
+//         newDiv.append(age)
+
+//         Supprimer=document.createElement("input")
+//         Modifier=document.createElement("input")
+//         btnDiv = document.createElement("div")
+//         btnDiv.append(Supprimer)
+//         btnDiv.append(Modifier)
+//         newDiv.append(btnDiv)
+
+//         Supprimer.classList.add('Supprimer')
+//         Modifier.classList.add('Modifier')
+
+//         Supprimer.setAttribute("type", "button");
+//         Modifier.setAttribute("type", "button");
+
+//         nom.value=user.nom
+//         prenom.value=user.prenom
+//         age.value=user.age
+
+
+//         document.getElementById("allUsers").append(newDiv)
+
+//     })
+//   }
+// }
+
+function showAllUsers() {
+  document.getElementById("allUsers").innerHTML = "";
+
+  users.forEach((user) => {
+    const newInputs = {
+      nom = document.createElement("input"),
+      prenom = document.createElement("input"),
+      age = document.createElement("input"),
+    };
+    const newDiv = document.createElement("div");
+    const newButtons = {
+      Supprimer = document.createElement("input"),
+      Modifier = document.createElement("input")
+    };
+    document.getElementById("allUsers").appendChild(newDiv)
+
+    for (const [key, value] of Object.entries(newInputs)) {
+      value.setAttribute("type", "text",);
+      value.setAttribute("id", `${key}OfUser${user.id}`);
+      key === "Nom" && value.setAttribute("value", `${user.nom}`);
+      key === "Prenom" && value.setAttribute("value", `${user.prenom}`);
+      key === "Age" && value.setAttribute("value", `${user.age}`);
+      newDiv.appendChild(value);
+      document.getElementById("allUsers").appendChild(newDiv);
+    }
+    for (const [key, value] of Object.entries(newButtons)) {
+      value.setAttribute("type", "button");
+      value.setAttribute("class", key);
+      value.setAttribute("id", user.id);
+      value.setAttribute("value", key);
+      newDiv.appendChild(value);
+    }
+  });
+  updateOrDeleteUser();
+
+
+
+
+
+  function deleteUser(id) {
+    users.forEach((user) => {
+      const userPositionInArray = users.indexOf(user);
+      user.id === parseInt(id) && users.splice(userPositionInArray, 1);
+    });
+    showAllUsers();
+  }
+
+  function editUser(id) {
+    const newInputs = {
+      nom: document.getElementById(`NomOfUser${id}`).value,
+      prenom: document.getElementById(`PrenomOfUser${id}`).value,
+      age: document.getElementById(`AgeOfUser${id}`).value,
+    };
+    users.forEach((user) => {
+      if (user.id === parseInt(id)) {
+        user.nom = newInputs.nom;
+        user.prenom = newInputs.prenom;
+        user.age = newInputs.age;
+      }
+    });
+  };

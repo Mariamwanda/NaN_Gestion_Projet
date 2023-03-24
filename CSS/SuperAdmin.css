@@ -1,285 +1,356 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-    background-color: rgb(240, 234, 246);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-section{
-    width: 100%;
-    float: left;
-    margin-left: 5%;
-    margin-top: 100px;
-    display: flex;
-    background-color: rgba(217, 217, 217, 1);
+.container {
+  position: relative;
+  width: 100%;
 }
 
-section .partieGauche{
-    width: 25%;
-    border-radius: 15px;
-    background-color: rgba(140, 172, 186, 1);
+.navigation{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: rgba(5, 74, 104, 1);
+  border-left: 10px solid rgba(140, 172, 186, 1);
+  transition:0.5s;
+  overflow: hidden;
 }
 
-.partieGauche .Entete{
-    width: 100%;
-    height: 150px;
-    background-color: rgba(5, 74, 104, 1);
-   
+.navigation.active{
+  width: 80px;
 }
 
-section .partieDroite{
-    width: 75%;
-    
+.navigation ul{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
 }
 
-.partieDroite .haut{
-    width: 100%;
-    height: 50px;
-    background-color: rgba(140, 172, 186, 1);
+.navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
-.partieDroite .MesDiv{
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-}
-
-.MesDiv{
-    display: flex;
-}
-
-.MesDiv .rond{
-    width: 23%;
-    height: 200px;
-    background-color: rgba(5, 74, 104, 1);
-    margin-left: 20px;
-    border-radius: 15px;
+.navigation ul li:hover,
+.navigation ul li .hovered
+{
+  background-color: #ffffff;
 }
 
 
-
-.MesLiens {
-    margin-top: 30px;
-    font-size: 25px;
-    color: #ffffff;
-    font-family: sans-serif;
-   
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
 }
 
-.MesLiens i{
-    font-size: 20px;
-    margin: 10px;
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #ffffff;
 }
 
-.rond{
-    display: flex;
+.navigation ul li:hover a,
+.navigation ul li .hovered a{
+  color: #000;
 }
 
-.rond i{
-  font-size: 20px;
-  float: left; margin-left: 65%;
-  background-color: antiquewhite;
-  border-radius: 100%;
-  width: 15%;
-  height: 35px;
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
   text-align: center;
-  margin-top: 10px;;
 }
 
-.rond h5{
-    font-size: 15px;
-    color: #ffffff;
-    margin-left: 10px;
-    font-family: sans-serif;
-    margin-top: 10px;
+.navigation ul li a .icon i{
+  font-size: 1.75rem;
 }
 
-.partieDroite .Liens{
-    display: flex;
-   justify-content: space-around;
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
 }
 
-.btn{
-    height: 40px;
-    width: 25%;
-  
-    padding: 10px;
-    float: left;
-    margin-left: 75%;
-    margin-top: -45px;
-    display: flex;
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background:rgba(217, 217, 217, 1);
+  transition: 0.5s;
 }
 
-.btn button{
-    width: 100%;
-    height: 30px;
-    margin-left: 10px;
-    border-radius: 20px;
-    border: none;
-    color: #ffffff;
-    background-color:rgba(5, 74, 104, 1) ;
+.main.active{
+  width: calc(100% - 80px);
+  left: 80px;
 }
 
-.btn i{
-    font-size: 15px;
-    margin-left: 10px;
-    margin-bottom: 5px;
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+
+.search label{
+  position: relative;
+  width: 100%;
+}
+
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 10px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid rgba(5, 74, 104, 1);
+}
+
+.search label i{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2rem;
+}
+
+.user{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardBox{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.cardBox .card{
+  position: relative;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 7px 25px rgb(0, 0, 0, 0.08) ;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.cardBox .card .numbers{
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: rgba(5, 74, 104, 1);
+}
+
+.cardBox .card .cardName{
+  color: #000;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.cardBox .card .iconBox{
+  font-size: 3rem;
+  color: rgba(5, 74, 104, 1);
+}
+
+.cardBox .card:hover{
+  background: rgba(140, 172, 186, 1);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBox{
+  color: #ffffff;
+}
+
+.icon img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+p{
+  font-size: 60px;
+  color: aqua;
+}
+
+.container form {
+  background-color: rgba(140, 172, 186, 1);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.container form button {
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgba(5, 74, 104, 1);
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  float: left;
+  margin-left: 200px;
+  margin: 30px;
+}
+input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#allUsers {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(140, 172, 186, 1);
+}
+#allUsers h3 {
+  color: white;
+  font-family: Verdana, sans-serif;
+}
+#allUsers div {
+  margin-bottom: 10px;
+}
+#allUsers div input {
+  margin-right: 5px;
+}
+#allUsers div input.Supprimer {
+  background-color: red;
+  color: white;
+}
+#allUsers div input.Modifier {
+  background-color: yellow;
 }
 
 
-  .haut img{
-    width: 5%;
-    height: 35px;
-    border-radius: 100%;
-    float: left;
-    margin-left: 90%;
-    margin-top: -3%;
+@media(max-width:991px){
+  .navigation{
+      left: -300px;
+  }
+  .navigation.active{
+      width: 300px;
+      left: 0;
+  }
+  .main{
+      width: 100%;
+      left: 0;
+  }
+  .main.active{
+      left: 300px;
+  }
+  .cardBox{
+      grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .details{
+      grid-template-columns: 1fr;
+  }
+  .recentOrders{
+      overflow: auto;
   }
 
-  .Entete img{
-    width: 15%;
-    height: 45px;
-    border-radius: 100%;
-    float: left;
-    margin-left: 40%;
-    margin-top: 15px;
+  .termine{
+      white-space: nowrap;
   }
-
-  .Entete p{
-    padding-top: 20px;
-    float: left;
-    margin-left: 35%;
-    font-family: sans-serif;
-    color: #ffffff;
+  .recentOrders table img{
+      width: 50%;
+      height: 50px;
   }
+}
 
-  .haut a{
-    text-decoration: none;
-    float: right;
-    margin-right: 80%;
-    margin-top: 10px;
-    font-size: 23px;
-    font-family: sans-serif;
-    color: #000;
+@media(max-width:480px){
+  .cardBox{
+      grid-template-columns: repeat(1,1fr);
   }
-
- 
-  .haut .Nom{
-    float: left;
-    margin-left: 82%;
-    margin-top: -1%;
-    font-size: 20px;
-    font-family: sans-serif;
+  .cardHeader h2{
+      font-size: 20px;
   }
-
-  .MesLiens .backgnd{
-    width: 100%;
-    background: linear-gradient(rgba(5, 74, 104, 1),rgba(140, 172, 186, 1));
-    height: 60px;
-    border: 2px solid beige;
+  .user{
+      min-width: 40px;
   }
-
-  .tableau{
-    width: 100%;
-    height: 400px;
-    margin-top: 150px;
+  .navigation.active{
+      width: 100%;
+      left: 0;
   }
-
-  .tableau .ligne1{
-    width: 100%;
-    height: 190px;
-    display: flex;
+  .toggle{
+      z-index: 10001;
   }
-
-  .ligne1 .tab{
-    width: 45%;
-    height: 315px;
-    margin-left: 40px;
-    background-color: #ffffff;
+  .main.active.toggle{
+      color: #ffffff;
+      position: fixed;
+      right: 0;
+      left: initial;
   }
-
-  .tableau .ligne2{
-    width: 100%;
-    height: 190px;
-    display: flex;
-  }
-
-  .ligne2 .tab{
-    width: 45%;
-    height: 180px;
-    margin-left: 40px;
-    margin-top:170px;
-    background-color: #ffffff;
-  }
-
-  .tab .input{
-    width: 90%;
-    border: 1px solid black;
-    height: 55px;
-    margin: 30px;
-    border-radius: 50px;
-  }
-
-  
-
-  .inputInter{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-  }
-
-  .inputInter p{
-    font-size: 25px;
-    font-family: helvetica;
-    color:rgba(5, 74, 104, 1) ;
-  }
-
-  .inputInter .iconBox{
-    font-size: 20px;
-    color: rgba(177, 136, 30, 0.69);
-  }
-
-  .inputInter b{
-    font-size: 20px;
-    font-family: helvetica;
-  }
-
-  .tab h5{
-    font-size: 20px;
-    font-family: helvetica;
-    margin-left: 20px;
-    color:rgba(5, 74, 104, 1) ;
-  }
-
-  .tab h4{
-    padding: 10px;
-    font-family: helvetica;
-    font-size: 20px;
-    margin-left: 10px;
-    color:rgba(5, 74, 104, 1) ;
-  }
-
-  .Cours .A{
-    display: inline-flex;
-    margin-left: 30px;
-    font-size: 25px;
-    font-family: helvetica;
-    color:rgba(5, 74, 104, 1) ;
-  }
-
-  .tab input{
-    width: 50%;
-    height: 50px;
-    margin-left: 30px;
-  }
-
-  .rond p{
-    margin-top: 110px;
-    margin-left: -45px;
-    font-size: 25px;
-    color: #ffffff;
-  }
+}

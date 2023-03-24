@@ -10,127 +10,105 @@
     <link rel="stylesheet" href="../CSS/SuperAdmin.css">
 </head>
 <body>
-
-    <section>
-        <div class="partieGauche">
-            <div class="Entete">
-                <img src="../images/icon.png" alt="">
-                <p>Super Admin</p>
-            </div>
-            <div class="MesLiens">
-                <div class="backgnd"><i class="fa-solid fa-table"></i>Tableau de Bord</div><br>
-                <div><i class="fa-solid fa-user-tie"></i>Personnalisation</div><br>
-                <div> <i class="fa-solid fa-check-double"></i>Taches</div><br>
-                <div> <i class="fa-solid fa-gear"></i>Parametre</div><br>
-                <div> <i class="fa-sharp fa-solid fa-signal"></i>Status</div>
-            </div>
+    <div class="container">
+        <div class="navigation .active">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                        <img src="../images/icon.png" alt="">
+                        </span>
+                        <span class="title">Super Admin</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../HTML/SuperAdmin.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="title">Tableau Bord</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../HTML/parametre.html">
+                        <span class="icon">
+                            <i class="fa-solid fa-gear"></i>
+                        </span>
+                        <span class="title">Parametres</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <i class="fa-sharp fa-solid fa-signal"></i>
+                        </span>
+                        <span class="title">Status</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="partieDroite">
-            <div class="haut">
-                <a href="../HTML/travailleurs.html">Nombres Travailleurs</a>
-               <div class="Nom">MARIAM</div>
-                <img src="../images/icon.png" alt="">
-            </div>
-            <div class="MesDiv">
-                <div class="rond">
-                    <h5>Travailleurs</h5>
-                    <p style="margin-left: -80px;"> 125</p>
-                    <i class="fa-solid fa-user-group" style=" margin-left: 65%;"></i>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="rond" style="background-color: rgba(140, 172, 186, 1);">
-                    <h5>Admin</h5>
-                    <p>3</p>
-                    <i class="fa-solid fa-handshake-angle" style=" margin-left: 70%;"></i>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="search here">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
                 </div>
-                <div class="rond">
-                    <h5>Postes</h5>
-                    <p>55</p>
-                    <i class="fa-brands fa-accusoft"></i>
-                </div>
-                <div class="rond" style="background-color: rgba(140, 172, 186, 1);">
-                    <h5>Places</h5>
-                    <p>155</p>
-                    <i class="fa-solid fa-handshake-angle" ></i>
-                   
+                <div class="user">
+                    <img src="../images/icon.png" alt="">
                 </div>
             </div>
-           <div class="tableau">
-                <div class="ligne1">
-                    <div class="tab">
-                        <h5>AJOUT DES ADMIN</h5>
-                        <div class="input">
-                            <div class="inputInter"><p>Admin</p>
-                                <div class="iconBox">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <b> 1 Semaine</b>
-                            </div>
-                        </div>
-                        <div class="input">
-                            <div class="inputInter"><p>Admin</p>
-                               <div class="iconBox">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                               </div>
-                                <b>3 Mars</b>
-                            </div>
-                        </div>
-                        <div class="input">
-                            <div class="inputInter"><p>Admin</p>
-                                <div class="iconBox"> 
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <b>28 Fevrier</b>
-                            </div>
-                        </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">145</div>
+                        <div class="cardName">Vues quotidienne</div>
                     </div>
-                    <div class="tab">
-                        <h5>CALENDRIER</h5>
-                        <div class="input" style=" height: 42px;">
-                            <h4>Journalière</h4>
-                        </div>
-                        <div class="input" style=" height: 42px;">
-                            <h4>Hebdomadaire</h4>
-                        </div>
-                        <div class="input" style=" height: 42px;">
-                            <h4>Quinzaine</h4>
-                        </div>
-                        <div class="input" style=" height: 42px;">
-                            <h4>Mois</h4>
-                        </div>
+                    <div class="iconBox">
+                        <i class="fa-regular fa-eye"></i>
                     </div>
                 </div>
-                <div class="ligne2">
-                    <div class="tab">
-                        <h4>Activité Principale</h4>
-                        <input class="custom-slider custom-slider-bullet" type="range">
-                        <div class="Cours">
-                            <div class="A">-</div> 
-                            <div class="A">En Cours...</div>
-                            <div class="A">+</div>
-                        </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">3</div>
+                        <div class="cardName">Admin</div>
                     </div>
-                    <div class="tab">
-                        <h5>AJOUT DES ADMIN</h5>
-                        <div class="input" style=" height: 42px;">
-                            <h4>Quotidien</h4>
-                        </div>
-                        <div class="input" style=" height: 42px;">
-                            <h4>Quotidien</h4>
-                        </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">145</div>
+                        <div class="cardName">Places</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">145</div>
+                        <div class="cardName">Revenus</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-solid fa-money-bill"></i>
                     </div>
                 </div>
            </div>
+           <form>
+                <input type="text" placeholder="Nom" autocomplete="off" id="nom"/>
+                <input type="text" placeholder="Prénom" autocomplete="off" id="prenom"/>
+                <input type="text" placeholder="Age" autocomplete="off" id="age"/>
+                <button id="valider">Ajouter</button>
+            </form>
+        <div id="allUsers"></div>
         </div>
-   </section>
-    
+    </div>
+    <script src="../JS/SuperAdmin.js"></script>
 </body>
 </html>
