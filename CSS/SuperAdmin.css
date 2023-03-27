@@ -197,14 +197,14 @@ body{
 .cardBox .card .numbers{
   position: relative;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: rgba(5, 74, 104, 1);
 }
 
 .cardBox .card .cardName{
   color: #000;
   font-size: 1.1rem;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .cardBox .card .iconBox{
@@ -232,65 +232,70 @@ body{
   border-radius: 100%;
 }
 
-p{
-  font-size: 60px;
-  color: aqua;
+table{
+  width: 80%;
+  margin: 40px auto;
+  background-color: aquamarine;
 }
 
-.container form {
-  background-color: rgba(140, 172, 186, 1);
-  border-radius: 10px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+table .list{
+  text-align: center;
+  width: 100%;
 }
-.container form button {
-  padding: 10px;
-  font-size: 20px;
-  background-color: rgba(5, 74, 104, 1);
-  color: white;
+td{
+  border: 1px solid red;
+  padding: 8px 15px;
+}
+tr:nth-child(even),table.list thread>tr{
+  background-color: bisque;
+}
+
+input[type= "text"],input[type="email"]{
+  width: 91%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 4px;
+}
+
+input[type= "submit"],input[type="reset"]{
+  background-color: darkgray;
+  padding: 6px 12px;
+  margin: 15px 0 10px;
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 4px;
+  border-radius: 30px;
+  font-size: 1rem;
   cursor: pointer;
   outline: none;
-  border: none;
-  border-radius: 10px;
-  float: left;
-  margin-left: 200px;
-  margin: 30px;
-}
-input {
-  padding: 10px;
-  outline: none;
-  border: none;
-  margin-bottom: 10px;
-  border-radius: 5px;
 }
 
-#allUsers {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(140, 172, 186, 1);
+input[type= "submit"]:hover{
+   background-color: rgba(5, 74, 104, 1);
 }
-#allUsers h3 {
-  color: white;
-  font-family: Verdana, sans-serif;
+
+input[type= "reset"]:hover{
+  background-color: rgba(5, 74, 104, 1);
 }
-#allUsers div {
-  margin-bottom: 10px;
+
+button{
+  background-color: darkgray;
+  padding: 6px 12px;
+  margin: 15px 0 10px;
+  display: inline-block;
+  border: 1px solid blue;
+  border-radius: 4px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
 }
-#allUsers div input {
-  margin-right: 5px;
+button :hover{
+  background-color: rgba(5, 74, 104, 1);
 }
-#allUsers div input.Supprimer {
-  background-color: red;
-  color: white;
-}
-#allUsers div input.Modifier {
-  background-color: yellow;
-}
+
 
 
 @media(max-width:991px){

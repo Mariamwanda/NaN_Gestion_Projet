@@ -79,6 +79,7 @@ form button{
     background-color: rgba(5, 74, 104, 1);
     outline: none;
     cursor: pointer;
+    color: #ffffff;
 }
 
 #inscription input{
@@ -87,6 +88,9 @@ form button{
     height: 30px;
     
 }
+
+
+
 
 
 

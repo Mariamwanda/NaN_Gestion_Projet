@@ -198,14 +198,14 @@ body{
 .cardBox .card .numbers{
     position: relative;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: rgba(5, 74, 104, 1);
 }
 
 .cardBox .card .cardName{
     color: #000;
     font-size: 1.1rem;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .cardBox .card .iconBox{
@@ -236,15 +236,13 @@ body{
   .tableau{
     width: 100%;
     margin-top: 20px;
-    background-color: palevioletred;
-    border: 1px solid black;
+   
   }
 
   .ligne1 .tab{
     display: flex;
     justify-content: space-around;
     width:  100%;
-    background-color: aqua;
    
   }
 
@@ -252,6 +250,8 @@ body{
     text-align: center;
     font-size: 30px;
     font-family: sans-serif;
+    margin: 20px;
+    color: rgba(5, 74, 104, 1);
   }
 
 
@@ -265,6 +265,7 @@ body{
     font-size: 20px;
     margin-bottom: 10px;
     font-family: sans-serif;
+    color: rgba(5, 74, 104, 1);
   }
 
   .tab ol,li{
@@ -275,9 +276,7 @@ body{
   }
 
   .ligne2 .tab{
-    
     width:  100%;
-    background-color: rgb(0, 51, 255);
   }
 
 .activité li{
@@ -287,13 +286,14 @@ body{
   .tab .rond{
     width: 50px;
     height: 50px;
-    border: 2px solid yellow;
+    border: 3px solid #ffffff;
     margin-left: 300px;
     align-items: center;
     padding: 20px;
     border-radius: 100%;
-    background-color: #f6b1b1;
+    background-color: rgba(5, 74, 104, 1);;
     margin-top: 5px;
+    color: #ffffff;
   }
 
   .tab .rait1{
@@ -364,6 +364,52 @@ body{
         left: initial;
     }
 }
+
+.ligne2 .tab{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ligne3 .tab{
+    display: flex;
+    margin-left: 15%;
+}
+
+.ligne3 .tab .MonInput{
+    border: 1px solid black;
+    width: 20%;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: 40px;
+    background: url(../images/payement-mtn-yepia.webp);
+    background-size:cover;
+    background-position:  100%  100% ;
+}
+
+.ligne3 .tab .MonInput1{
+    border: 1px solid black;
+    width: 20%;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: 40px;
+    background: url(../images/payement-wave-yepia.webp);
+    background-size:cover;
+    background-position:  100%  100% ;
+}
+
+.ligne3 .tab .MonInput2{
+    border: 1px solid black;
+    width: 20%;
+    height: 100px;
+    margin-left: 5%;
+    margin-top: 40px;
+    background: url(../images/payement-moov-yepia.webp);
+    background-size:cover;
+  
+}
+
+
+
 
 
 

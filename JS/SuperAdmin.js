@@ -18,136 +18,40 @@ toggle.onclick = function(){
     navigation.classList.toggle("active");
     main.classList.toggle("active");
 }
+ 
 
-
-const users = [{ id: 1, nom: "Jean", prenom: "Pierre", age: 25}];
-const validateButton = document.getElementById("valider");
-
-validateButton.addEventListener("click", addUser);
-showAllUsers();
-updateOrDeleteUser();
-function updateOrDeleteUser() {
-  const deleteButtons = document.querySelectorAll(".Supprimer");
-  const editButtons = document.querySelectorAll(".Modifier");
-
-  deleteButtons.forEach((button) =>
-    button.addEventListener("click", () => deleteUser(button.id))
-  );
-  editButtons.forEach((button) =>
-    button.addEventListener("click", () => editUser(button.id))
-  );
-}
-
-function addUser(e) {
-  e.preventDefault();
-  const enteredUsersData = {
-    id: users.length !== 0 ? users[users.length - 1].id + 1 : 1,
-    nom: document.getElementById("nom").value,
-    prenom: document.getElementById("prenom").value,
-    age: document.getElementById("age").value,
-  };
-//   if (
-//     enteredUsersData.nom !== "" &&
-//     enteredUsersData.prenom !== "" &&
-//     enteredUsersData.age !== ""    
-   
-    
-//   ) {
-//     users.push(enteredUsersData);
-    //showAllUsers();
-//     //document.getElementById("allUsers").append()
-//     document.getElementById("allUsers").innerHTML = ""
-//     users.forEach((user)=> {
-//         nom=document.createElement("input")
-//         prenom=document.createElement("input")
-//         age=document.createElement("input")
-//         newDiv = document.createElement("div")
-//         newDiv.append(nom)
-//         newDiv.append(prenom)
-//         newDiv.append(age)
-
-//         Supprimer=document.createElement("input")
-//         Modifier=document.createElement("input")
-//         btnDiv = document.createElement("div")
-//         btnDiv.append(Supprimer)
-//         btnDiv.append(Modifier)
-//         newDiv.append(btnDiv)
-
-//         Supprimer.classList.add('Supprimer')
-//         Modifier.classList.add('Modifier')
-
-//         Supprimer.setAttribute("type", "button");
-//         Modifier.setAttribute("type", "button");
-
-//         nom.value=user.nom
-//         prenom.value=user.prenom
-//         age.value=user.age
-
-
-//         document.getElementById("allUsers").append(newDiv)
-
-//     })
-//   }
-// }
-
-function showAllUsers() {
-  document.getElementById("allUsers").innerHTML = "";
-
-  users.forEach((user) => {
-    const newInputs = {
-      nom = document.createElement("input"),
-      prenom = document.createElement("input"),
-      age = document.createElement("input"),
-    };
-    const newDiv = document.createElement("div");
-    const newButtons = {
-      Supprimer = document.createElement("input"),
-      Modifier = document.createElement("input")
-    };
-    document.getElementById("allUsers").appendChild(newDiv)
-
-    for (const [key, value] of Object.entries(newInputs)) {
-      value.setAttribute("type", "text",);
-      value.setAttribute("id", `${key}OfUser${user.id}`);
-      key === "Nom" && value.setAttribute("value", `${user.nom}`);
-      key === "Prenom" && value.setAttribute("value", `${user.prenom}`);
-      key === "Age" && value.setAttribute("value", `${user.age}`);
-      newDiv.appendChild(value);
-      document.getElementById("allUsers").appendChild(newDiv);
+ 
+ var selectedRow = null;
+ function onFormSubmit(){
+    event.preventDefault(e);
+    var formData = readFormData();
+    if(selectedRow == null){
+      insertNewRecord(formData)
     }
-    for (const [key, value] of Object.entries(newButtons)) {
-      value.setAttribute("type", "button");
-      value.setAttribute("class", key);
-      value.setAttribute("id", user.id);
-      value.setAttribute("value", key);
-      newDiv.appendChild(value);
-    }
-  });
-  updateOrDeleteUser();
+ }
 
+ function readFormData(){
+    var formData = {};
+    formData["nom"] = document.getElementById("nom").value;
+    formData["prenom"] = document.getElementById("prenom").value;
+    formData["email"] = document.getElementById("email").value;
+    formData["poste"] = document.getElementById("poste").value;
 
+    return formData;
+ }
 
+ function insertNewRecord(data){
+   var table = document.getElementById("storeList").getElementsByTagName('tbody')[0];
+   var newRow = table.insertRow(table.length);
+   var cell1 = newRow.insertCell(0);
+     cell1.innerHTML = data.nom;
+    var cell2 = newRow.insertCell(1);
+     cell2.innerHTML = data.prenom;
+    var cell3 = newRow.insertCell(2);
+     cell3.innerHTML = data.email;
+    var cell4 = newRow.insertCell(3);
+     cell4.innerHTML = data.poste;
+    var cell5 = newRow.insertCell(4);
+     cell5.innerHTML = `<button>Modifier</button> <button>Supprimer</button>`
+ }
 
-
-  function deleteUser(id) {
-    users.forEach((user) => {
-      const userPositionInArray = users.indexOf(user);
-      user.id === parseInt(id) && users.splice(userPositionInArray, 1);
-    });
-    showAllUsers();
-  }
-
-  function editUser(id) {
-    const newInputs = {
-      nom: document.getElementById(`NomOfUser${id}`).value,
-      prenom: document.getElementById(`PrenomOfUser${id}`).value,
-      age: document.getElementById(`AgeOfUser${id}`).value,
-    };
-    users.forEach((user) => {
-      if (user.id === parseInt(id)) {
-        user.nom = newInputs.nom;
-        user.prenom = newInputs.prenom;
-        user.age = newInputs.age;
-      }
-    });
-  };
