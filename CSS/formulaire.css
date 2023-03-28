@@ -78,7 +78,7 @@ body{
 }
 
 .second input{
-    width: 75%;
+    width: 70%;
 }
 
 #formulaire .second input[type="email"],input[type="text"],input[type="time"],input[type="date"]{
@@ -90,12 +90,6 @@ body{
     outline: none;
 }
 
- .second .none{
-    width: 20px;
-    height: 20px;
-    margin: 10px;
-    
-}
 
 .second select{
     width: 75%;

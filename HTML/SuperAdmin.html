@@ -76,7 +76,7 @@
                     <div>
                        
                         <div class="cardName">Admin</div>
-                        <div class="numbers">3</div>
+                        <div class="numbers" id="numberAdmin"></div>
                     </div>
                     <div class="iconBox">
                         <i class="fa-solid fa-user"></i>
@@ -105,40 +105,43 @@
            <table>
                 <tr>
                     <td>
-                        <form autocomplete="off" onsubmit="onFormSubmit()">
+                        <form>
                             <h1>Ajouter Admin</h1>
                             <div>
-                                <label for="Nom">Nom</label>
+                                <label for="Nom">Nom</label><br>
                                 <input type="text" name="admin" id="nom">
                             </div>
                             <div>
-                                <label for="Prenom">Prenom</label>
+                                <label for="Prenom">Prenom</label><br>
                                 <input type="text" name="admin" id="prenom">
                             </div>
                             <div>
-                                <label for="email">Email</label>
+                                <label for="email">Email</label><br>
                                 <input type="email" name="email" id="email">
                             </div>
                             <div>
-                                <label for="Poste">Poste</label>
+                                <label for="Poste">Poste</label><br>
                                 <input type="text" name="poste" id="poste">
                             </div>
                             <div class="form_action--button">
-                                <input type="submit" value="submit">
-                                <input type="Reset" value="Reset">
+                              
+                                <input type="reset" value="Supprimer">
+                                <button type="button" id="submit">Envoyer</button>
                             </div>
                         </form>
                         <td>
                             <table class="list" id="storeList">
                                 <thead>
                                     <tr>
+                                        <th>Id </th>
                                         <th>Nom</th>
                                         <th>Prenom</th>
                                         <th>Email</th>
                                         <th>Poste</th>
+                                     
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tbody">
 
                                 </tbody>
                             </table>

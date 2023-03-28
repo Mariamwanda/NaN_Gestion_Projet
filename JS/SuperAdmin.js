@@ -1,3 +1,12 @@
+if(localStorage.getItem("admin")){
+  const numberAdd = JSON.parse(localStorage.admin).filter(key=>key.statut != 0 &&  key.admin == false).length;
+  document.getElementById('numberAdmin').textContent = numberAdd;
+}else{
+  document.getElementById('numberAdmin').textContent = 0;
+}
+
+
+
 let list = document.querySelectorAll(".navigation li");
 
 function activeLink(){
@@ -18,40 +27,106 @@ toggle.onclick = function(){
     navigation.classList.toggle("active");
     main.classList.toggle("active");
 }
- 
 
- 
- var selectedRow = null;
- function onFormSubmit(){
-    event.preventDefault(e);
-    var formData = readFormData();
-    if(selectedRow == null){
-      insertNewRecord(formData)
+document.getElementById('submit').addEventListener("click",saveAdmin)
+function saveAdmin(){
+  const saveNom = document.getElementById('nom')
+  const savePrenom = document.getElementById('prenom')
+  const saveEmail = document.getElementById('email')
+  const savePoste = document.getElementById('poste')
+  const tbody = document.getElementById('tbody')
+   
+  const Data = [];
+
+  if(saveNom.value.replaceAll((" ","")!="")){
+    if(savePrenom.value.replaceAll((" ","")!="")){
+      if(saveEmail.value.replaceAll((" ","")!="")){
+        if(savePoste.value.replaceAll((" ","")!="")){
+          const NewAdmin = {
+            id : "",
+            nom : saveNom.value,
+            prenom : savePrenom.value,
+            email : saveEmail.value,
+            poste : savePoste.value,
+            admin : false,
+            statut : 1,
+          };
+          if(localStorage.getItem("admin")){
+            const bigData = JSON.parse(localStorage.getItem("admin"));
+            NewAdmin.id = bigData.length+1;
+            bigData.push(NewAdmin);
+            localStorage.setItem("admin",JSON.stringify(bigData));
+          }else{
+            NewAdmin.id = 1;
+            Data.push(NewAdmin);
+            localStorage.setItem("admin",JSON.stringify(Data))
+          }
+
+          const tr = document.createElement('tr');
+          const tdId = document.createElement('td')
+          tdId.textContent = NewAdmin.id;
+
+          const tdName = document.createElement('td')
+          tdName.textContent = NewAdmin.nom;
+
+          const tdPrenm = document.createElement('td')
+          tdPrenm.textContent = NewAdmin.prenom;
+
+          const tdEmail = document.createElement('td')
+          tdEmail.textContent = NewAdmin.email;
+
+          const tdPoste = document.createElement('td')
+          tdPoste.textContent = NewAdmin.poste;
+
+          tr.append(tdId);
+          tr.append(tdName);
+          tr.append(tdPrenm);
+          tr.append(tdEmail);
+          tr.append(tdPoste);
+          tbody.append(tr);
+          
+        }else{
+          savePoste.focus()
+        }
+      }else{
+        saveEmail.focus()
+      }
+    }else{
+      savePrenom.focus()
     }
- }
+  }else{
+    saveNom.focus()
+  }
+}
+const requette = JSON.parse(localStorage.getItem("admin")).filter(key=>key.statut != 0 &&  key.admin == false);
+function  afficheAdmin(AllAdmin){
+  const content = document.getElementById('tbody')
+  if(Array.isArray(AllAdmin)){
+    AllAdmin.forEach(key=>{
+      const tr = document.createElement('tr');
+          const tdId = document.createElement('td')
+          tdId.textContent = key.id;
 
- function readFormData(){
-    var formData = {};
-    formData["nom"] = document.getElementById("nom").value;
-    formData["prenom"] = document.getElementById("prenom").value;
-    formData["email"] = document.getElementById("email").value;
-    formData["poste"] = document.getElementById("poste").value;
+          const tdName = document.createElement('td')
+          tdName.textContent = key.nom;
 
-    return formData;
- }
+          const tdPrenm = document.createElement('td')
+          tdPrenm.textContent = key.prenom;
 
- function insertNewRecord(data){
-   var table = document.getElementById("storeList").getElementsByTagName('tbody')[0];
-   var newRow = table.insertRow(table.length);
-   var cell1 = newRow.insertCell(0);
-     cell1.innerHTML = data.nom;
-    var cell2 = newRow.insertCell(1);
-     cell2.innerHTML = data.prenom;
-    var cell3 = newRow.insertCell(2);
-     cell3.innerHTML = data.email;
-    var cell4 = newRow.insertCell(3);
-     cell4.innerHTML = data.poste;
-    var cell5 = newRow.insertCell(4);
-     cell5.innerHTML = `<button>Modifier</button> <button>Supprimer</button>`
- }
+          const tdEmail = document.createElement('td')
+          tdEmail.textContent = key.email;
+
+          const tdPoste = document.createElement('td')
+          tdPoste.textContent = key.poste;
+
+          tr.append(tdId);
+          tr.append(tdName);
+          tr.append(tdPrenm);
+          tr.append(tdEmail);
+          tr.append(tdPoste);
+          content.append(tr);
+    })
+  }
+}
+afficheAdmin(requette)
 

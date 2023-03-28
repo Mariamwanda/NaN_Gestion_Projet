@@ -28,7 +28,7 @@ console.log(users);
 let tbody = document.createElement('tbody');
 
 
-function createTable() {
+function createTable(){
   for (let index = 0; index < users.length; index++) {
     let row = document.createElement("tr");
     // creer le button de supression

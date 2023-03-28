@@ -1,4 +1,4 @@
-
+q
     let nom = document.querySelector('#nom');
     let prenom = document.querySelector('#prenom');
     let email = document.querySelector('#email')
