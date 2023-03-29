@@ -78,11 +78,23 @@ function saveAdmin(){
           const tdPoste = document.createElement('td')
           tdPoste.textContent = NewAdmin.poste;
 
+          const btnSupp = document.createElement('td')
+          let BtnSUp = document.createElement('button')
+          BtnSUp.textContent = "Supprimer"
+          btnSupp.appendChild(BtnSUp)
+
+          const btnModif = document.createElement('td')
+          let BtnModif = document.createElement('button')
+           BtnModif.textContent = "Modifier"
+           btnModif.appendChild(BtnModif)
+
           tr.append(tdId);
           tr.append(tdName);
           tr.append(tdPrenm);
           tr.append(tdEmail);
           tr.append(tdPoste);
+          tr.append(btnSupp)
+          tr.append(btnModif)
           tbody.append(tr);
           
         }else{
@@ -129,4 +141,31 @@ function  afficheAdmin(AllAdmin){
   }
 }
 afficheAdmin(requette)
+
+
+
+
+
+const tbody = document.getElementById('tbody')
+const button = document.querySelectorAll('button')
+console.log(tbody)
+
+
+button.forEach((supp)=>{
+    supp.addEventListener('click',function(e){
+        let racine = e.target.closest("td")
+        console.log(racine.id);
+        tbody.removeChild(racine);
+
+        filter = admin.filter((id)=> id.email !== racine.id )
+          console.log(filter)
+
+            localStorage.setItem('admin', JSON.stringify(filter))
+
+
+
+    })
+})
+
+
 

@@ -357,6 +357,13 @@ body{
     border-radius: 100%;
 }
 
+.backGround{
+    border: 2px solid #ffffff;
+    background: linear-gradient(rgba(5, 74, 104, 1),rgba(140, 172, 186, 1));
+    width: 100%;
+    height: 50px;
+  }
+
 
 @media(max-width:991px){
     .navigation{

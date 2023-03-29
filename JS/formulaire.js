@@ -1,4 +1,4 @@
-q
+
     let nom = document.querySelector('#nom');
     let prenom = document.querySelector('#prenom');
     let email = document.querySelector('#email')
@@ -8,26 +8,23 @@ q
     let tache = document.querySelector('#tache');
     let description = document.querySelector('#description');
 
-    function recuper(){
-        recu = localStorage.getItem('users')
-        if (recu === null) {
-                return []
-        } else {
-            return JSON.parse(recu)
+   
+     function ajout(conatct){
+         localStorage.setItem('users',JSON.stringify(conatct))
         }
-    }
+        
+        tab =  JSON.parse(localStorage.getItem('users')) || []
 
-    function ajout(conatct){
-            let recupere = recuper();
-            recupere.push(conatct)
-            localStorage.setItem('users',JSON.stringify(recupere))
-    }
+    
+    
+
     const btn = document.querySelector('#valider')
-    btn.addEventListener('click',function(){
+    btn.addEventListener('click',function(e){
+        e.preventDefault()
         if(nom.value === '' || prenom.value === ''  || email.value === '' ||  genre.value === ''||  date.value === '' || heure.value === '' || tache.value === ''){
             alert('Veuillez Rempli Tout Les Champs Vides')
         }else{
-            const infos = {
+                infos = {
                 nom:nom.value,
                 prenom:prenom.value,
                 email:email.value,
@@ -37,10 +34,14 @@ q
                 tache:tache.value,
                 description:description.value,
             }
-            ajout(infos)
+
+          tab.push(infos)
+
+          ajout(tab)
+            
+          window.location.href = "file:///Users/imac_46/Desktop/NaN_Gestion_Projet/HTML/dashboard.html"
+
         }
-            document.location.reload()
     });
 
-    console.log(btn);
 

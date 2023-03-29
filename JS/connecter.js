@@ -1,8 +1,9 @@
 
-
+const btn = document.querySelector('#connection')
+btn.addEventListener('click',function(){})
 
 document.getElementById("connection").addEventListener("click",connection)
-function connection(){
+// function connection(){
     let conEmail = document.getElementById("Email")
     let conPassWor = document.getElementById("passe")
     if(conEmail.value.replaceAll(" ","")!=""){
@@ -25,10 +26,8 @@ function connection(){
                     alert("Mot de passe ou Email incorrecte");
                    
                 }
-            }else{
-                alert("ce compte n'existe pas.cliquez sur OK pour creer un compte")
             }
             
         }
     }
-}
+// }

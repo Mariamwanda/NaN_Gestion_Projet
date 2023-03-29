@@ -21,57 +21,57 @@ toggle.onclick = function(){
 }
 
 
+
 const dashbord = document.querySelector('.dashbord')
-users = JSON.parse(localStorage.getItem('users'));
+let users = JSON.parse(localStorage.getItem('users'));
 console.log(dashbord);
 console.log(users);
 let tbody = document.createElement('tbody');
 
 
-function createTable(){
-  for (let index = 0; index < users.length; index++) {
-    let row = document.createElement("tr");
-    // creer le button de supression
-    let buttonCell = document.createElement("td");
-    let buttonCel = document.createElement("td");
-    let deleteButton = document.createElement("button");
-    let buttonText = document.createTextNode("Supprimer");
-    deleteButton.setAttribute("class", "delete-btn");
-    deleteButton.appendChild(buttonText);
 
-    for ( 
-      let element = 0;
-      element < Object.keys(users[index]).length;
-      element++
-    ) {
-        
-        console.log(element)
+users.forEach((lem)=>{
+      dom = ` 
+      <tr id="${lem.email}">
+          <td>${lem.nom}</td>
+          <td>${lem.prenom}</td>
+          <td>${lem.email}</td>
+          <td>${lem.genre}</td>
+          <td>${lem.date}</td>
+          <td>${lem.heure}</td>
+          <td>${lem.tache}</td>
+          <td>${lem.description}</td>
+          <td><button class="delete-btn" contactphone="${lem.email}">Supprimer</button></td>
+      </tr>
+      
+      `
 
-      // ajouter les td
-      const cell = document.createElement("td");
+      tbody.innerHTML += dom
+      dashbord.appendChild(tbody)
+})
 
-      const cellText = document.createTextNode( Object.values(users[index])[element]
-      );
-      console.log(cellText);
-      console.log(cell);
-      deleteButton.setAttribute("contactPhone", users[index].telephone);
-      deleteButton.setAttribute("contactPhone", users[index].telephone);
-      buttonCell.appendChild(deleteButton);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
-      row.appendChild(buttonCell);
-      row.setAttribute("id", users[index].telephone);
 
-      // console.log( Object.keys(contacts[0]));
-    }
-    console.log('tets',row)
-    tbody.appendChild(row);
-  }
-  dashbord.appendChild(tbody);
-}
+const btn = document.querySelectorAll('.delete-btn')
 
-createTable();
+btn.forEach((div)=>{
+    div.addEventListener('click',function(e){
+        let parent = e.target.closest("tr")
+        console.log(parent.id);
+        tbody.removeChild(parent)
 
+        filter = users.filter((id)=> id.email !== parent.id )
+        console.log(filter)
+
+            localStorage.setItem('users', JSON.stringify(filter))
+
+
+
+
+    })
+})
+
+
+console.log(btn);
 
 
 
