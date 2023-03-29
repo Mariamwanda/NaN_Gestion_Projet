@@ -28,7 +28,11 @@ toggle.onclick = function(){
     main.classList.toggle("active");
 }
 
-document.getElementById('submit').addEventListener("click",saveAdmin)
+document.getElementById('submit').addEventListener("click",function(e){
+ 
+  saveAdmin()
+  window.location.reload()
+})
 function saveAdmin(){
   const saveNom = document.getElementById('nom')
   const savePrenom = document.getElementById('prenom')
@@ -37,6 +41,7 @@ function saveAdmin(){
   const tbody = document.getElementById('tbody')
    
   const Data = [];
+  
 
   if(saveNom.value.replaceAll((" ","")!="")){
     if(savePrenom.value.replaceAll((" ","")!="")){
@@ -51,6 +56,7 @@ function saveAdmin(){
             admin : false,
             statut : 1,
           };
+          
           if(localStorage.getItem("admin")){
             const bigData = JSON.parse(localStorage.getItem("admin"));
             NewAdmin.id = bigData.length+1;
@@ -62,41 +68,59 @@ function saveAdmin(){
             localStorage.setItem("admin",JSON.stringify(Data))
           }
 
-          const tr = document.createElement('tr');
-          const tdId = document.createElement('td')
-          tdId.textContent = NewAdmin.id;
+          // const tr = document.createElement('tr');
+          // const tdId = document.createElement('td')
+          // tdId.textContent = NewAdmin.id;
 
-          const tdName = document.createElement('td')
-          tdName.textContent = NewAdmin.nom;
+          // const tdName = document.createElement('td')
+          // tdName.textContent = NewAdmin.nom;
 
-          const tdPrenm = document.createElement('td')
-          tdPrenm.textContent = NewAdmin.prenom;
+          // const tdPrenm = document.createElement('td')
+          // tdPrenm.textContent = NewAdmin.prenom;
 
-          const tdEmail = document.createElement('td')
-          tdEmail.textContent = NewAdmin.email;
+          // const tdEmail = document.createElement('td')
+          // tdEmail.textContent = NewAdmin.email;
 
-          const tdPoste = document.createElement('td')
-          tdPoste.textContent = NewAdmin.poste;
+          // const tdPoste = document.createElement('td')
+          // tdPoste.textContent = NewAdmin.poste;
 
-          const btnSupp = document.createElement('td')
-          let BtnSUp = document.createElement('button')
-          BtnSUp.textContent = "Supprimer"
-          btnSupp.appendChild(BtnSUp)
+          // const btnSupp = document.createElement('td')
+          // let BtnSUp = document.createElement('button')
+          // BtnSUp.id = NewAdmin.id;
+          // BtnSUp.textContent = "Supprimer"
+          // btnSupp.appendChild(BtnSUp)
 
-          const btnModif = document.createElement('td')
-          let BtnModif = document.createElement('button')
-           BtnModif.textContent = "Modifier"
-           btnModif.appendChild(BtnModif)
-
-          tr.append(tdId);
-          tr.append(tdName);
-          tr.append(tdPrenm);
-          tr.append(tdEmail);
-          tr.append(tdPoste);
-          tr.append(btnSupp)
-          tr.append(btnModif)
+          // const btnModif = document.createElement('td')
+          // let BtnModif = document.createElement('button')
+          // BtnModif.id = NewAdmin.id;
+          //  BtnModif.textContent = "Modifier";
+          //  btnModif.appendChild(BtnModif)
+            
+           contenu = `<tr>
+    
+           <td>${NewAdmin.id}</td>
+           <td>${NewAdmin.nom}</td>
+           <td>${NewAdmin.prenom}</td>
+           <td>${NewAdmin.email}</td>
+           <td>${NewAdmin.poste}</td>
+           <td><button id="${NewAdmin.id}">Supprimer</button></td>
+           <td><button id="${NewAdmin.nom}">Modifier</button></td>
+          </tr>`
+          tbody.innerHTML += contenu
+          // tr.append(tdId);
+          // tr.append(tdName);
+          // tr.append(tdPrenm);
+          // tr.append(tdEmail);
+          // tr.append(tdPoste);
+          // tr.append(btnSupp)
+          // tr.append(btnModif)
           tbody.append(tr);
           
+          saveNom.value = "";
+          savePrenom.value ="";
+          saveEmail.value ="";
+          savePoste.value = "";
+
         }else{
           savePoste.focus()
         }
@@ -115,28 +139,52 @@ function  afficheAdmin(AllAdmin){
   const content = document.getElementById('tbody')
   if(Array.isArray(AllAdmin)){
     AllAdmin.forEach(key=>{
-      const tr = document.createElement('tr');
-          const tdId = document.createElement('td')
-          tdId.textContent = key.id;
+      // const tr = document.createElement('tr');
+      //     const tdId = document.createElement('td')
+      //     tdId.textContent = key.id;
 
-          const tdName = document.createElement('td')
-          tdName.textContent = key.nom;
+      //     const tdName = document.createElement('td')
+      //     tdName.textContent = key.nom;
 
-          const tdPrenm = document.createElement('td')
-          tdPrenm.textContent = key.prenom;
+      //     const tdPrenm = document.createElement('td')
+      //     tdPrenm.textContent = key.prenom;
 
-          const tdEmail = document.createElement('td')
-          tdEmail.textContent = key.email;
+      //     const tdEmail = document.createElement('td')
+      //     tdEmail.textContent = key.email;
 
-          const tdPoste = document.createElement('td')
-          tdPoste.textContent = key.poste;
+      //     const tdPoste = document.createElement('td')
+      //     tdPoste.textContent = key.poste;
 
-          tr.append(tdId);
-          tr.append(tdName);
-          tr.append(tdPrenm);
-          tr.append(tdEmail);
-          tr.append(tdPoste);
-          content.append(tr);
+      //     const btnSupp = document.createElement('td')
+      //     let BtnSUp = document.createElement('button')
+      //     BtnSUp.id = NewAdmin.id;
+      //     BtnSUp.textContent = "Supprimer"
+      //     btnSupp.appendChild(BtnSUp)
+
+      //     const btnModif = document.createElement('td')
+      //     let BtnModif = document.createElement('button')
+      //     BtnModif.id = NewAdmin.id;
+      //     BtnModif.textContent = "Modifier";
+      //     btnModif.appendChild(BtnModif)
+        const  contenu = `<tr>
+      
+           <td>${key.id}</td>
+           <td>${key.nom}</td>
+           <td>${key.prenom}</td>
+           <td>${key.email}</td>
+           <td>${key.poste}</td>
+           <td><button id="${key.id}">Supprimer</button></td>
+           <td><button id="${key.nom}">Modifier</button></td>
+          </tr>`
+          tbody.innerHTML += contenu
+          // tr.append(tdId);
+          // tr.append(tdName);
+          // tr.append(tdPrenm);
+          // tr.append(tdEmail);
+          // tr.append(tdPoste);
+          // tr.append(btnSupp);
+          // tr.append(btnModif);
+          // content.append(tr);
     })
   }
 }
@@ -147,7 +195,7 @@ afficheAdmin(requette)
 
 
 const tbody = document.getElementById('tbody')
-const button = document.querySelectorAll('button')
+const button = document.querySelector('button')
 console.log(tbody)
 
 
@@ -161,8 +209,6 @@ button.forEach((supp)=>{
           console.log(filter)
 
             localStorage.setItem('admin', JSON.stringify(filter))
-
-
 
     })
 })

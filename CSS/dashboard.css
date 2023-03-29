@@ -81,7 +81,7 @@ table tr:hover td{
 
 .navigation ul li:nth-child(1){
     margin-bottom: 40px;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .navigation ul li a{

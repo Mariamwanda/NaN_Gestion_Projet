@@ -409,3 +409,23 @@ select{
     border: none;
     color: #cac7c7;
 }
+
+@media(max-width:991px){
+    section{
+        left: -300px;
+    }
+    section .partieGauche{
+        width: 300px;
+        left: 0;
+    }
+    .partieDroite .Connecter{
+        width: 25%;
+        left: 0;
+    }
+    .main.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
