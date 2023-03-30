@@ -1,35 +1,4 @@
 
-// const btn = document.querySelector('#connection')
-// btn.addEventListener('click',function(){})
-
-// document.getElementById("connection").addEventListener("click",connection)
-// // function connection(){
-//     let conEmail = document.getElementById("Email")
-//     let conPassWor = document.getElementById("passe")
-//     if(conEmail.value.replaceAll(" ","")!=""){
-//         if(conPassWor.value.replaceAll(" ","")!=""){
-//             if(localStorage.getItem("SuperAdmin")){
-//                 const DataAdmin = JSON.parse(localStorage.getItem("admin"))
-//                 if(conEmail.value == DataSuperAdmin.email && conPassWor.value == DataSuperAdmin.passe){
-//                     const DataSession = {
-//                         email : conEmail.value,
-//                         passe : conPassWor.value,
-//                     }
-//                     console.log(DataSession);
-//                     alert("je suis un SuperAdmin simple")
-//                     sessionStorage.setItem("sessionAdmin",JSON.stringify(DataSession))
-//                     window.location.href = "../HTML/SuperAdmin.html"
-//                 }else if((conEmail.value != DataSuperAdmin.email && conPassWor.value != DataSuperAdmin.passe)&& (DataAdmin.find(key=>key.email==conEmail.value && key.passe==conPassWor.value))){
-//                     alert("je suis un Admin simple")
-//                     window.location.href = "../HTML/dashboard.html"
-//                 }
-//             }
-            
-//         }
-//     }
-// // }
-
-
 const Admin = {
     AdmEmail : 'mariamwandaogo7@gmail.com',
     AdmPasse : 'oooo'
@@ -44,6 +13,21 @@ const SuperAdmin = {
 localStorage.setItem('SuperAdmin', JSON.stringify(SuperAdmin));
 console.log(SuperAdmin);
 
-const connection = document.querySelector('#connection')
-connection.addEventListener('connection',function)
+const btn = document.querySelector("#connection");
+btn.addEventListener("click",function(e){
+    e.preventDefault();
+    const Email = document.querySelector("#Email").value
+    const passe = document.querySelector("#passe").value
+    console.log(Email, passe)
+    if(Email==SuperAdmin.SupEmail && passe == SuperAdmin.SupPasse){
+        window.location.href = "./SuperAdmin.html"
+    }else if(Email==Admin.AdmEmail && passe==Admin.AdmPasse){
+        window.location.href = "./dashboard.html"
+    } else{
+        document.querySelector("#error").innerHTML="Erreur"
+    }
+
+})
+
+
 

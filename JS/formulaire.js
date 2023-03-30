@@ -39,7 +39,7 @@
 
           ajout(tab)
             
-          window.location.href = "file:///Users/imac_46/Desktop/NaN_Gestion_Projet/HTML/dashboard.html"
+          window.location.href = "./dashboard.html"
 
         }
     });
