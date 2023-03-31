@@ -36,9 +36,7 @@
             }
 
           tab.push(infos)
-
-          ajout(tab)
-            
+          ajout(tab) 
           window.location.href = "./dashboard.html"
 
         }

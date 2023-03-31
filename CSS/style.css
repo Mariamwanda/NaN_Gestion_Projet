@@ -14,24 +14,26 @@ section{
     width: 100%;
     background-color: rgba(140, 172, 186, 1);
     display: flex;
-    height: 100vh;
+    
 }
 
 section .partieGauche{
     width: 50%;
-    background-position: center;
-    background-size: cover;
+    height: 1200px;
 }
 
 section .partieDroite{
     width: 50%;
     background-position: center;
     background-size: cover;
+    height: 1200px;
+ 
     
 }
 
 .partieDroite{
     background: url(../images/femme.png);
+    width: 100%;
 }
 
 .partieDroite a{
@@ -338,11 +340,13 @@ h1{
 }
 
 #footer{
-    background-color: rgba(83, 83, 83, 0.33);
+    background-color: #cac7c7;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top: 30px;
+    position: relative;
+    
+   
 }
 
 #footer img{
