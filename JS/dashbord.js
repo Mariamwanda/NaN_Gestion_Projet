@@ -65,8 +65,6 @@ btn.forEach((div)=>{
             localStorage.setItem('users', JSON.stringify(filter))
 
 
-
-
     })
 })
 

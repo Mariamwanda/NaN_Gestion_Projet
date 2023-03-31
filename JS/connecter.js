@@ -24,7 +24,7 @@ btn.addEventListener("click",function(e){
     }else if(Email==Admin.AdmEmail && passe==Admin.AdmPasse){
         window.location.href = "./dashboard.html"
     } else{
-        document.querySelector("#error").innerHTML="Erreur"
+       alert("Desolé Veuillez Rempli Les Champs")
     }
 
 })
