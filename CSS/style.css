@@ -21,8 +21,6 @@ section .partieGauche{
     width: 50%;
     background-position: center;
     background-size: cover;
-   
-   
 }
 
 section .partieDroite{
@@ -113,40 +111,43 @@ span{
     border: 1px solid black;
     color: rgba(5, 74, 104, 1);
 }
-
 #MaPage{
     background-color: rgba(217, 217, 217, 1);
+    position: relative;
     width: 100%;
-    height: 590px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  
+  #MaPage .img-grid{
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
     display: flex;
-   
-}
-#MaPage .img-grid{
-    width: 450px;
-    height: 450px;
-    margin-top: 60px;
-    margin-left: 175px;
-}
-
-.img-grid img{
+    justify-content: space-between;
+  }
+  .img-grid img{
     width: 100%;
     height: 446px;
     border-radius: 60px;
+    margin-left: 80px;
 }
 h1{
-   background-color:rgba(217, 217, 217, 1);
-   text-align: center;
-   padding-top: 25px;
-   font-family: sans-serif;
-   color: rgba(5, 74, 104, 1);
-}
+    background-color:rgba(217, 217, 217, 1);
+    text-align: center;
+    padding-top: 25px;
+    font-family: sans-serif;
+    color: rgba(5, 74, 104, 1);
+ }
 
 .img-grid h2{
     text-align: center;
     padding-top: 10px;
     font-family: sans-serif;
     color: rgba(5, 74, 104, 1);
-}
+} 
+ 
 
 #Programme{
     width: 100%;
@@ -181,18 +182,18 @@ h1{
 .MesDivA .sousdivA{
     width: 40%;
     border: 2px solid rgb(49, 49, 49);
-    height: 305px;
+   
     box-shadow: 1px 1px 1px rgb(98, 97, 97);
 }
 
 .MesDivA .sousdivB{
     width: 60%;
-    height: 305px;
+   
 }
 
 .sousdivA img{
     width: 100%;
-    height: 305px;
+ 
 }
 
 .sousdivB #inspect{
@@ -276,7 +277,7 @@ h1{
 #Structure{
     background-color: rgba(140, 172, 186, 1);
     width: 100%;
-    height: 390px;
+    height: 40vh;
    
 }
 
@@ -339,7 +340,6 @@ h1{
 #footer{
     background-color: rgba(83, 83, 83, 0.33);
     width: 100%;
-    height: 190px;
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
@@ -411,22 +411,18 @@ select{
     color: #cac7c7;
 }
 
-@media(max-width:991px){
-    section{
-        left: -300px;
-    }
-    section .partieGauche{
-        width: 300px;
-        left: 0;
-    }
-    .partieDroite .Connecter{
-        width: 25%;
-        left: 0;
-    }
-    .main.active{
-        left: 300px;
-    }
-    .cardBox{
+@media(max-width:970px){
+    #MaPage{
+        width: 70%;
         grid-template-columns: repeat(2,1fr);
     }
   }
+
+  @media(max-width:440px){
+   
+    #MaPage{
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+  
+  
